@@ -17,38 +17,40 @@
 //
 function warriorPresent (){
             console.log('my name is: ' + this.name + ' and I will crush you!');
+}
             
 
 function fight() {
     if (this.gender === 'M') {
-        console.log(this.name + " rushes to the arena with his" + this.weapon )
+        console.log(this.name + " rushes to the arena with his " + this.weapon )
     }
     else if (this.gender === 'F') {
-        console.log(this.name + " rushes to the arena with her" + this.weapon )
+        console.log(this.name + " rushes to the arena with her " + this.weapon )
     }
     else
-    console.log(this.name + " rushes to the arena with their" + this.weapon )
+    console.log(this.name + " rushes to the arena with their " + this.weapon )
 }
 
-function faceoff(opponent) {
+// function faceoff(opponent) {
 
-}
+// }
+
 function Warrior(name,gender) {
 
     this.name= name,
     this.gender= gender,
     this.level= 1,
     this.weapon= "rainbows",
-    this.power= Math.random() * 100 + 1
+    this.power= Math.random() * 100 + 1,
     
-    this.present= warriorPresent
-    
+    this.present= warriorPresent,
+    this.attack = fight;
 }
 
 var unicorn = new Warrior("Unicornio", "M");
 
 var squirrl = new Warrior("Squirrl", "M");
 
+console.log(unicorn, squirrl);
 
-
-
+unicorn.attack();
