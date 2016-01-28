@@ -9,7 +9,7 @@
 arr.sort(function(a,b){
            return a.length<b.length;
         });
-        console.log(arr);*/
+        console.log(arr);
         
 //**2**
 //Create an array of objects (don’t need to use new here, just regular object 
@@ -66,3 +66,17 @@ function sortByNameLength (sortArr) { /// modifies original array
 }
 
 var result = sortByNameLength(arr);
+*/
+
+//**3**
+//Create a function that can be used with Array.prototype.map. This function should 
+//take a number and return its square. Then, use this function with map on an array 
+//of numbers to check the result.
+
+var numbers = [1, 4, 9];
+function square(n) {
+    return n*n;
+}
+var roots = numbers.map(square);
+
+console.log(roots)
